@@ -8,7 +8,11 @@ export default function Header() {
         <h1 className="text-white text-3xl font-bold">ReactMeals</h1>
         <Cart />
       </div>
-      <img src="/images/headerImage.jpg" alt="Header" className="w-full h-32" />
+      <img
+        className="w-full h-auto"
+        src=".\images\headerImage.jpg"
+        alt="A table full of delicious food!"
+      />
     </>
   );
 }

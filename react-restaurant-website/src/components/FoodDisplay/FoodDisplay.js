@@ -5,9 +5,9 @@ import FoodItem from "./FoodItem";
 const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
   return (
-    <div>
-      <h2>Top dishes near you</h2>
-      <div>
+    <div className="mt-8">
+      <h2 className="font-semibold text-2xl">Top dishes near you</h2>
+      <div className="grid grid-cols-4 mt-8 gap-6 gap-y-12">
         {food_list.map((item, index) => (
           <FoodItem
             key={index}

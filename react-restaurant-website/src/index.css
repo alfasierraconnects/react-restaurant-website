@@ -16,3 +16,16 @@
 .animate-fadeIn {
   animation: fadeIn 1s ease-in-out forwards;
 }
+
+@keyframes pulseLoad {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.animate-pulseLoad {
+  animation: pulseLoad 0.5s cubic-bezier(0.4, 0, 0.6, 1) 2;
+}

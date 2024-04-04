@@ -11,7 +11,7 @@ const LoginPopup = ({ setShowLogin }) => {
   return (
     <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-75 backdrop-blur-sm">
       <form
-        className="absolute bg-white shadow-lg rounded-md p-6 w-96"
+        className="bg-white shadow-lg rounded-md p-6 w-96"
         onSubmit={handleSubmit}
       >
         <div className="flex justify-between items-center">
@@ -88,7 +88,7 @@ const LoginPopup = ({ setShowLogin }) => {
           onClick={() =>
             setCurrState(currState === "signup" ? "login" : "signup")
           }
-          className="mt-6 text-center text-gray-600 active:text-red-500 hover:font-semibold cursor-pointer"
+          className="mt-6 text-center text-gray-600 hover:text-red-500 hover:font-semibold cursor-pointer"
         >
           {currState === "signup"
             ? "Already have an account?"

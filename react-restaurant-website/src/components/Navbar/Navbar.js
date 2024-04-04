@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/assets";
+import { Link } from "react-router-dom";
 
 function Navbar({ setShowLogin }) {
   const menuActive = "pb-0.5 border-b-2 border-gray-700";
@@ -7,14 +8,18 @@ function Navbar({ setShowLogin }) {
 
   return (
     <div className="py-5 px-2.5 flex justify-between items-center">
-      <img src={assets.logo} alt="" className="w-[150px]" />
+      <Link to="/">
+        <img src={assets.logo} alt="" className="w-[150px]" />
+      </Link>
       <ul className="navbar-menu flex gap-5 text-gray-700 text-lg  hover:cursor-pointer">
-        <li
-          onClick={() => setMenu("home")}
-          className={menu === "home" ? menuActive : ""}
-        >
-          home
-        </li>
+        <Link to="/">
+          <li
+            onClick={() => setMenu("home")}
+            className={menu === "home" ? menuActive : ""}
+          >
+            home
+          </li>
+        </Link>
         <li
           onClick={() => setMenu("menu")}
           className={menu === "menu" ? menuActive : ""}
@@ -37,7 +42,9 @@ function Navbar({ setShowLogin }) {
       <div className="navbar-right flex items-center gap-10">
         <img src={assets.search_icon} alt="" />
         <div className="relative">
-          <img src={assets.basket_icon} alt="" />
+          <Link to="/cart">
+            <img src={assets.basket_icon} alt="" />
+          </Link>
           <div className="absolute min-w-2 min-h-2 rounded-full top-[-8px] right-[-8px] p-1 bg-red-500"></div>
         </div>
         <button

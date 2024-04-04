@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import PlaceOrder from "./pages/PlaceOrder";
 import Footer from "./components/Footer/Footer";
-import DownloadApp from "./components/Footer/DownloadApp";
 import LoginPopup from "./components/LoginPopup";
 
 const App = () => {
@@ -24,7 +23,6 @@ const App = () => {
           </Routes>
         </div>
       </div>
-      <DownloadApp />
       <Footer />
     </>
   );

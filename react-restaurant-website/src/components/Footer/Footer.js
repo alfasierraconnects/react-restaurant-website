@@ -12,17 +12,29 @@ const Footer = () => {
             dishes and creating memorable dining experiences for food
             enthusiasts since 1968.
           </p>
-          <div className="flex gap-2 w-9">
-            <img src={assets.facebook_icon} alt="" />
-            <img src={assets.twitter_icon} alt="" />
-            <img src={assets.linkedin_icon} alt="" />
+          <div className="flex gap-2 w-9 cursor-pointer">
+            <img
+              className="transition hover:scale-105"
+              src={assets.facebook_icon}
+              alt=""
+            />
+            <img
+              className="transition hover:scale-105"
+              src={assets.twitter_icon}
+              alt=""
+            />
+            <img
+              className="transition hover:scale-105"
+              src={assets.linkedin_icon}
+              alt=""
+            />
           </div>
         </div>
 
         <div className="grid grid-cols-2 gap-12">
           <div>
             <h3 className="text-white text-lg font-semibold">COMPANY</h3>
-            <ul className="mt-4">
+            <ul className="mt-4 cursor-pointer">
               <li className="block mt-2 text-sm text-gray-600 dark:text-gray-200 hover:underline">
                 Home
               </li>
@@ -41,13 +53,13 @@ const Footer = () => {
           <div>
             <h3 className="text-white text-lg font-semibold">GET IN TOUCH</h3>
             <p
-              className="block mt-4 text-sm text-gray-600 dark:text-gray-200 hover:underline"
+              className="block mt-4 text-sm text-gray-600 dark:text-gray-200 hover:underline cursor-pointer"
               aria-label="Phone number"
             >
               +91 89895 77733
             </p>
             <p
-              className="block mt-2 text-sm text-gray-600 dark:text-gray-200 hover:underline"
+              className="block mt-2 text-sm text-gray-600 dark:text-gray-200 hover:underline cursor-pointer"
               aria-label="Email address"
             >
               contact@tomato.com

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { assets } from "../../assets/assets";
 
-function Navbar() {
+function Navbar({ setShowLogin }) {
   const menuActive = "pb-0.5 border-b-2 border-gray-700";
   const [menu, setMenu] = useState("home");
 
@@ -40,8 +40,11 @@ function Navbar() {
           <img src={assets.basket_icon} alt="" />
           <div className="absolute min-w-2 min-h-2 rounded-full top-[-8px] right-[-8px] p-1 bg-red-500"></div>
         </div>
-        <button className="bg-transparent text-base text-gray-700 border-2 rounded-full border-red-400 py-2 px-7 transition duration-300 hover:bg-red-100">
-          sign in
+        <button
+          onClick={() => setShowLogin(true)}
+          className="bg-transparent text-base text-gray-700 border-2 rounded-full border-red-400 py-2 px-7 transition duration-300 hover:bg-red-100"
+        >
+          sign up
         </button>
       </div>
     </div>

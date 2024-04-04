@@ -67,7 +67,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr className="h-1 m-4 mt-12 mx-24 bg-gray-200 border-none dark:bg-gray-700" />
+      <hr className="h-1 mb-4 mt-16 mx-28 bg-gray-200 border-none dark:bg-gray-700" />
 
       <div>
         <p className="text-center text-gray-500 dark:text-gray-200">

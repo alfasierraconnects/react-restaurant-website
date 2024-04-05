@@ -1,7 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
 import { StoreContext } from "../context/StoreContext";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
+  const navigate = useNavigate();
+
   const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
     useContext(StoreContext);
 
@@ -73,7 +76,7 @@ const Cart = () => {
               <p>&#8377; {displayAmount[2]}</p>
             </div>
             <button
-              type="submit"
+              onClick={() => navigate("/order")}
               className=" bg-red-500 text-white mt-4 px-8 py-2 rounded-sm hover:bg-red-600 active:shadow-lg active:bg-red-500 disabled:hover:bg-red-500 disabled:active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={displayAmount[2] === 0}
             >

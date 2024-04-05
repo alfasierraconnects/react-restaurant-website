@@ -74,7 +74,8 @@ const Cart = () => {
             </div>
             <button
               type="submit"
-              className=" bg-red-500 text-white mt-4 px-8 py-2 rounded-sm hover:bg-red-600 active:shadow-lg active:bg-red-500 "
+              className=" bg-red-500 text-white mt-4 px-8 py-2 rounded-sm hover:bg-red-600 active:shadow-lg active:bg-red-500 disabled:hover:bg-red-500 disabled:active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={displayAmount[2] === 0}
             >
               PROCEED TO CHECKOUT
             </button>

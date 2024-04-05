@@ -22,15 +22,17 @@ const StoreContextProvider = (props) => {
     let totalAmount = 0;
     let deliveryfee = 0;
     let subtotal = 0;
+    let totalItems = 0;
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
         const currItem = food_list.find((food) => food._id === item);
         totalAmount += currItem.price * cartItems[item];
         deliveryfee += 10 * cartItems[item];
+        totalItems += cartItems[item];
       }
     }
     subtotal = totalAmount + deliveryfee;
-    return [totalAmount, deliveryfee, subtotal];
+    return [totalAmount, deliveryfee, subtotal, totalItems];
   };
 
   const contextValue = {

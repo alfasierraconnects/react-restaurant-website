@@ -1,8 +1,15 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { StoreContext } from "../context/StoreContext";
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart } = useContext(StoreContext);
+  const { cartItems, food_list, removeFromCart, getTotalCartAmount } =
+    useContext(StoreContext);
+
+  const [displayAmount, setDisplayAmount] = useState([0, 0, 0]);
+
+  useEffect(() => {
+    setDisplayAmount(getTotalCartAmount(cartItems));
+  }, [cartItems, getTotalCartAmount]);
 
   return (
     <div className="container mx-auto p-4 my-20">
@@ -53,17 +60,17 @@ const Cart = () => {
             <h3 className="font-semibold text-xl mb-3">Cart Totals</h3>
             <div className="flex justify-between my-1 font-semibold text-gray-600">
               <p>Subtotal</p>
-              <p>&#8377; 0</p>
+              <p>&#8377; {displayAmount[0]}</p>
             </div>
             <hr />
             <div className="flex justify-between my-1 font-semibold text-gray-600">
               <p>Delivery Fee</p>
-              <p>&#8377; 0</p>
+              <p>&#8377; {displayAmount[1]}</p>
             </div>
             <hr />
             <div className="flex justify-between font-semibold my-1">
               <p>Total</p>
-              <p>&#8377; 0</p>
+              <p>&#8377; {displayAmount[2]}</p>
             </div>
             <button
               type="submit"

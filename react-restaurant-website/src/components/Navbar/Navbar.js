@@ -16,41 +16,51 @@ function Navbar({ setShowLogin }) {
   return (
     <div className="py-5 px-2.5 flex justify-between items-center">
       <Link to="/">
-        <img src={assets.logo} alt="" className="w-[150px]" />
+        <img src={assets.logo} alt="Logo" className="w-[150px]" />
       </Link>
-      <ul className="navbar-menu flex gap-5 text-gray-700 text-lg  hover:cursor-pointer">
-        <Link to="/">
-          <li
+      <ul className="navbar-menu flex gap-5 text-gray-700 text-lg hover:cursor-pointer">
+        <li>
+          <Link
+            to="/"
             onClick={() => setMenu("home")}
             className={menu === "home" ? menuActive : ""}
           >
             home
-          </li>
-        </Link>
-        <li
-          onClick={() => setMenu("menu")}
-          className={menu === "menu" ? menuActive : ""}
-        >
-          menu
+          </Link>
         </li>
-        <li
-          onClick={() => setMenu("mobile app")}
-          className={menu === "mobile app" ? menuActive : ""}
-        >
-          mobile app
+        <li>
+          <a
+            href="#explore-menu"
+            onClick={() => setMenu("menu")}
+            className={menu === "menu" ? menuActive : ""}
+          >
+            menu
+          </a>
         </li>
-        <li
-          onClick={() => setMenu("contact us")}
-          className={menu === "contact us" ? menuActive : ""}
-        >
-          contact us
+        <li>
+          <a
+            href="#app-download"
+            onClick={() => setMenu("mobile app")}
+            className={menu === "mobile app" ? menuActive : ""}
+          >
+            mobile app
+          </a>
+        </li>
+        <li>
+          <a
+            href="#footer"
+            onClick={() => setMenu("contact us")}
+            className={menu === "contact us" ? menuActive : ""}
+          >
+            contact us
+          </a>
         </li>
       </ul>
       <div className="navbar-right flex items-center gap-10">
-        <img src={assets.search_icon} alt="" />
+        <img src={assets.search_icon} alt="Search" />
         <div className="relative">
           <Link to="/cart">
-            <img src={assets.basket_icon} alt="" />
+            <img src={assets.basket_icon} alt="Cart" />
           </Link>
           {cartItemsDisplay > 0 && (
             <div className="absolute h-5 w-5 text-center rounded-full top-[-8px] right-[-8px] bg-red-500 text-white font-medium text-sm">

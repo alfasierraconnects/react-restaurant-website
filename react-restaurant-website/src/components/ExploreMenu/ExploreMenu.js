@@ -7,7 +7,7 @@ const ExploreMenu = ({ category, setCategory }) => {
   const active = "border-4 border-red-300 p-0.5";
 
   return (
-    <div className="flex flex-col gap-5">
+    <div id="explore-menu" className="flex flex-col gap-5">
       <h1 className="text-gray-700 font-medium text-2xl">Explore Our Menu</h1>
       <p className="w-3/5 text-gray-700 font-medium">
         choose from a diverse menu featuring a delectable array of dishes. Our

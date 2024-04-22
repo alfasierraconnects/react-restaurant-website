@@ -14,15 +14,18 @@ function Navbar({ setShowLogin }) {
   }, [cartItems, getTotalCartAmount]);
 
   return (
-    <div className="py-5 px-2.5 flex justify-between items-center">
-      <Link to="/">
+    <div className="py-3 px-2.5 flex justify-between items-center fixed top-0 left-0 w-full z-50 bg-red-100 bg-opacity-85">
+      <Link to="/" onClick={() => window.scrollTo(0, 0)}>
         <img src={assets.logo} alt="Logo" className="w-[150px]" />
       </Link>
       <ul className="navbar-menu flex gap-5 text-gray-700 text-lg hover:cursor-pointer">
         <li>
           <Link
             to="/"
-            onClick={() => setMenu("home")}
+            onClick={() => {
+              setMenu("home");
+              window.scrollTo(0, 0);
+            }}
             className={menu === "home" ? menuActive : ""}
           >
             home

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import { assets } from "../../assets/assets";
+import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
-import { StoreContext } from "../../context/StoreContext";
+import { StoreContext } from "../context/StoreContext";
 
 function Navbar({ setShowLogin }) {
   const menuActive = "pb-0.5 border-b-2 border-gray-700";
@@ -57,8 +57,12 @@ function Navbar({ setShowLogin }) {
         </li>
       </ul>
       <div className="navbar-right flex items-center gap-10">
-        <img src={assets.search_icon} alt="Search" />
-        <div className="relative">
+        <img
+          onClick={() => setMenu("")}
+          src={assets.search_icon}
+          alt="Search"
+        />
+        <div className="relative" onClick={() => setMenu("")}>
           <Link to="/cart">
             <img src={assets.basket_icon} alt="Cart" />
           </Link>
